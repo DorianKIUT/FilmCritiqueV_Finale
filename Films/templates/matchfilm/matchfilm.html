@@ -1,0 +1,93 @@
+{% csrf_token %}
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://use.fontawesome.com/5208c770b3.js"></script>
+    <meta charset="UTF-8">
+    <title>FilmCritique</title>
+  </head>
+  <body class="size-body mx-auto text-center">
+    <div id="app">
+        <list-film
+            :username_login = username_login
+            :nologin="nologin"
+            :films="films"
+            @selectfilm="doSelectFilm"
+            @add-name-film="insertFilmName"
+            @connexion="getconnexion"
+            @deconnexion="deconnexion">
+        </list-film>
+    <img class="img-front-size" src="http://www.stuk.be/sites/default/files/images/event_group/main/zed_zaal_xxlscherm_0.jpg">
+        <br>
+        <div>
+        <all-film-user-display
+            v-if="!nologin"
+            :nologin="nologin">
+        </all-film-user-display>
+        </div>
+        <div class="m-5">
+            <button-register
+                v-if="nologin"
+                :nologin="nologin">
+            </button-register>
+        </div>
+        <add-film
+            v-if="!nologin"
+            :create_film="create_film"
+            :genre="genre"
+            :reals="reals"
+            :actors="actors"
+            @addfilm="doAddFilm">
+        </add-film>
+        <modal-add-user>
+
+        </modal-add-user>
+        <footer class="mx-auto">
+            <footer-component>
+
+            </footer-component>
+        </footer>
+    </div>
+    {% render_bundle 'main' %}
+  </body>
+
+</html>
+
+<style>
+
+.size-body{
+    width: 61%;
+    text-align: center;
+    background-color: white;
+    margin: 0;
+
+}
+html {
+    text-align: center;
+    background-color: #F5F5F5;
+    margin:0;
+    padding:0
+}
+.background-menu{
+    background-color: #E5E4E4;
+    margin: 0;
+
+}
+.img-front-size{
+    width: 100%;
+    height: 50%;
+}
+</style>
+<script>
+
+</script>
+<script>
+
+</script>
+<script>
+
+</script>
+<script>
+
+</script>

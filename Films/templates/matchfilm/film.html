@@ -1,0 +1,67 @@
+{% csrf_token %}
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://use.fontawesome.com/5208c770b3.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/video.js@6.6.2/dist/video-js.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vue-video-player@5.0.0/src/custom-theme.css" rel="stylesheet">
+    <!-- Include the videojs library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.6.2/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- videojs JS Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue-video-player@5.0.0/dist/vue-video-player.js"></script>
+    <meta charset="UTF-8">
+    <title>page Film</title>
+  </head>
+  <body class="mx-auto text-center justify-content-center">
+    <div id="app">
+        <div class="size-menu mx-auto">
+            <list-film
+                :username_login = username_login
+                :nologin="nologin"
+                :films="films"
+                @selectfilm="doSelectFilm"
+                @add-name-film="insertFilmName"
+                @connexion="getconnexion"
+                @deconnexion="deconnexion">
+            </list-film>
+        </div>
+        <film-info
+            :username_login = username_login
+            :nologin="nologin"
+            :film_selected="film_selected"
+            :films="films">
+        </film-info>
+        <modal-add-film>
+        </modal-add-film>
+        <modal-trailer>
+
+        </modal-trailer>
+        <footer class="mx-auto">
+            <footer-component>
+
+            </footer-component>
+        </footer>
+    </div>
+    {% render_bundle 'main' %}
+  </body>
+</html>
+<style>
+
+
+html {
+    text-align: center;
+    background-color: #F5F5F5;
+}
+
+.size-menu{
+    width: 59%;
+    margin: 0;
+    background-color: #E5E4E4;
+}
+
+</style>
+<script>
+
+</script>

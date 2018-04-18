@@ -1,0 +1,36 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="22">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="modal-add-film" />
+            <item index="7" class="java.lang.String" itemvalue="list-film" />
+            <item index="8" class="java.lang.String" itemvalue="film-info" />
+            <item index="9" class="java.lang.String" itemvalue="all-film-display" />
+            <item index="10" class="java.lang.String" itemvalue="add-film" />
+            <item index="11" class="java.lang.String" itemvalue="all-actor-display" />
+            <item index="12" class="java.lang.String" itemvalue="chartjs-pie" />
+            <item index="13" class="java.lang.String" itemvalue="pie-chart" />
+            <item index="14" class="java.lang.String" itemvalue="modal-trailer" />
+            <item index="15" class="java.lang.String" itemvalue="actor-info" />
+            <item index="16" class="java.lang.String" itemvalue="all-film-user-display" />
+            <item index="17" class="java.lang.String" itemvalue="button-register" />
+            <item index="18" class="java.lang.String" itemvalue="modal-add-user" />
+            <item index="19" class="java.lang.String" itemvalue="footer-component" />
+            <item index="20" class="java.lang.String" itemvalue="user-info" />
+            <item index="21" class="java.lang.String" itemvalue="bar-chart" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+  </profile>
+</component>

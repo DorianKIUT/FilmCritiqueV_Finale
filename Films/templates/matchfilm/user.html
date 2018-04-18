@@ -1,0 +1,53 @@
+{% csrf_token %}
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://use.fontawesome.com/5208c770b3.js"></script>
+    <meta charset="UTF-8">
+    <title>page Film</title>
+  </head>
+  <body class="size-body mx-auto">
+    <div id="app">
+        <list-film
+            :username_login = username_login
+            :nologin="nologin"
+            :films="films"
+            @selectfilm="doSelectFilm"
+            @add-name-film="insertFilmName"
+            @connexion="getconnexion"
+            @deconnexion="deconnexion">
+        </list-film>
+        <user-info
+            v-if="!nologin"
+            :username_login = username_login>
+        </user-info>
+        <modal-add-film>
+        </modal-add-film>
+        <footer class="mx-auto">
+            <footer-component>
+
+            </footer-component>
+        </footer>
+    </div>
+    {% render_bundle 'main' %}
+  </body>
+</html>
+
+<style>
+
+
+.size-body{
+    width: 60%;
+    text-align: center;
+    background-color: white;
+
+}
+html {
+    text-align: center;
+    background-color: #F5F5F5;
+}
+</style>
+<script>
+
+</script>
