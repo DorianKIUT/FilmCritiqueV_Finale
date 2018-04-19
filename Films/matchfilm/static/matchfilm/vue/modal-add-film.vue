@@ -36,6 +36,7 @@
                 widthModal: 600,
                 data: '',
                 rate: 0,
+                new_critique:'',
             }
         },
         mounted() {
@@ -55,11 +56,14 @@
                 this.showModal = false;
                 this.text = '';
                 this.data = '';
+                this.new_critique = '';
+                this.rate = 0;
             },
 
             submit: function (confirm, new_critique, rate) {
                 this.$bus.$emit('confirm', confirm, new_critique, rate);
                 this.close();
+
             }
         },
     }
